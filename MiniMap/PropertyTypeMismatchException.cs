@@ -2,7 +2,7 @@
 
 namespace MiniMap
 {
-    internal class PropertyTypeMismatchException : Exception
+    public class PropertyTypeMismatchException : Exception
     {
         public PropertyTypeMismatchException()
             : base("Mapping Exception: Property Type Mismatch")

@@ -1,9 +1,11 @@
-﻿namespace MiniMap
+﻿using System.Collections.Generic;
+
+namespace MiniMap
 {
     public interface IMapper
     {
-        T Map<T>(T source) where T : new();
-        T Map<T>(object source) where T : new();
-        T Map<T>(object source, T destination);
+        TSourceAndDestination Map<TSourceAndDestination>(TSourceAndDestination source);
+        TDestination Map<TDestination>(object source);
+        TDestination Map<TDestination>(object source, TDestination destination);
     }
 }
